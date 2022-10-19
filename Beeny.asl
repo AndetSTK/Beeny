@@ -17,15 +17,15 @@ init
 
 update
 {
-	current.SceneName = vars.Helper.Scenes.Active.Name;
+    current.SceneName = vars.Helper.Scenes.Active.Name;
 }
 
 start
 {
-	return (current.SceneName != "SaveStatesMenu" && old.SceneName == "SaveStatesMenu");
+    return (current.SceneName != "SaveStatesMenu" && old.SceneName == "SaveStatesMenu");
 }
 
 split
 {
-	return (vars.Helper["interactable"].Current < vars.Helper["interactable"].Old || (current.SceneName == "Credits" && old.SceneName != "Credits"));
+    return (vars.Helper["interactable"].Current < vars.Helper["interactable"].Old || (current.SceneName == "Credits" && old.SceneName != "Credits"));
 }
