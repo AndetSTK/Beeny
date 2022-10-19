@@ -27,5 +27,5 @@ start
 
 split
 {
-    return (vars.Helper["interactable"].Current < vars.Helper["interactable"].Old || (current.SceneName == "Credits" && old.SceneName != "Credits"));
+    return ((current.interactable == 0 && old.interactable != 0) || (current.SceneName == "Credits" && old.SceneName != "Credits"));
 }
