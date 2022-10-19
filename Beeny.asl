@@ -10,7 +10,7 @@ init
     vars.Helper.TryLoad = (Func<dynamic, bool>)(mono =>
     {
         vars.Helper["interactable"] = mono.Make<int>("GameManager", "instance", "interactable");
-	vars.Helper["currentSlot"] = mono.MakeString("SaveManager", "instance", "currentSlot");
+        vars.Helper["currentSlot"] = mono.MakeString("SaveManager", "instance", "currentSlot");
 	return true;
     });
 }
