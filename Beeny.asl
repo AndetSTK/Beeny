@@ -7,11 +7,12 @@ startup
 
 init
 {
+    vars.Helper.TryLoadTimeout = 200;
     vars.Helper.TryLoad = (Func<dynamic, bool>)(mono =>
     {
         vars.Helper["interactable"] = mono.Make<int>("GameManager", "instance", "interactable");
         vars.Helper["currentSlot"] = mono.MakeString("SaveManager", "instance", "currentSlot");
-	return true;
+        return true;
     });
 }
 
