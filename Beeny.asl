@@ -2,7 +2,7 @@ state("Beeny") {}
 startup
 {
     Assembly.Load(File.ReadAllBytes(@"Components/asl-help")).CreateInstance("Unity");
-	vars.Helper.LoadSceneManager = true;
+    vars.Helper.LoadSceneManager = true;
 }
 
 init
